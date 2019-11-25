@@ -1,3 +1,4 @@
+import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -79,7 +80,12 @@ public class Katsed {
         vs18.tunnid.put("2019-11-18", tunnid);
 
         // kontrollime tunniplaani andmed
-        System.out.println(vs18);
+//        System.out.println(vs18);
+
+        // loome JSON andmestik loodud tüübide põhjal
+        Gson g = new Gson();
+        String vs18JSON = g.toJson(vs18);
+        System.out.println(vs18JSON);
 
     }
 }
